@@ -1,0 +1,50 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container_nav_bar {
+    width: 20vw;
+    height: 100vh;
+    background: rgb(2, 54, 42);
+    color: white;
+    text-align: center;
+}
+
+.container_nav_bar a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+}
+
+.logo p {
+    font-size: 2rem;
+    margin-top: 1.5rem
+}
+
+.nav_bar_links{
+    margin-top: 2rem;
+    font-size: 1.5em;
+    padding: 2rem;
+    
+}
+
+.nav_bar_links li {
+    list-style-type: none;
+    padding: 10px;
+}
+
