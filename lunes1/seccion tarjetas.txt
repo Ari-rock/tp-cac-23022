@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    .marco {
+        display:flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+       
+        }
+      
+      .menu {
+        display:flex;
+        flex-wrap: wrap;
+       flex:1050px;
+        background-color: darkorchid;
+      }
+      
+     .footer {
+        height: 100px;
+        background-color: chocolate;
+        align-self:self-end;
+       
+      }
+.contenedor{
+    
+   display: flex;
+   justify-content: center;
+    width: auto;
+    height: auto;
+    min-height: 1010px;
+    column-gap: 200px;
+    row-gap: 25px;
+   flex-wrap:wrap;
+    background-color: rgb(212, 212, 170);
+     overflow: hidden;
+     align-items:center;
+     
+ }
+.giro-carta {
+    background-color: transparent;
+    
+    perspective: 1000px;
+    border-radius: 20px;
+    width: 230px;
+    height:260px;
+    /* Remove this if you don't want the 3D effect */
+     }
+.cartel{
+    margin-bottom: 3px;
+    margin-top: 3px;
+    font-size: 32px;
+    }
+.birra-img{
+    width:100%;
+    height:83.5%;
+    object-position:center;
+    border-bottom-right-radius:1rem;
+    border-bottom-left-radius:1rem;
+     }
+/* This container is needed to position the front and back side */
+.giro-carta-lateral {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.giro-carta:hover .giro-carta-lateral {
+    transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.carta-anverso,
+.carta-reverso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+.carta-anverso {
+    background-color: #16df70;
+    border-radius: 1rem;
+    color: rgb(15, 15, 15);
+    width: 100%;
+    height:100%;
+   }
+/* Style the back side */
+.carta-reverso {
+    background-color: rgb(177, 247, 177);
+    color: rgb(14, 13, 13);
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    border-radius: 26px;
+}
+p{ text-align:left;
+ margin:2rem;
+margin-left: 1rem;
+margin-right: 10px;
+font-size: 18px;
+ }
+
+ .titulo {
+    width: auto;
+    text-align: center;
+    background-color: rgb(212, 212, 170);
+    font-size: 20px;
+    padding: 15px 800px ;  
+    margin-bottom: 10px;
+}
+
