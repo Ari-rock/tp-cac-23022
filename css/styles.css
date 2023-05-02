@@ -66,12 +66,11 @@ body{
     
 }
 
-
 /* Header */
 /*--------*/
 /*--------*/
 
-.header {
+header, .main-nav {
     background: var(--color-header);
     grid-column: 2 / 6;
     grid-row: 2/ 30;
@@ -79,11 +78,12 @@ body{
 
 }
 
-
-.container-navbar, 
-.navbar{
+.main-nav{
     height: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -118,16 +118,38 @@ body{
     height: 100%;
 }
 
-.navbar-links {
+/*menu hamburguesa*/
+/*-----------------------------*/
+img {
+    max-width: 100%;
+}
+
+.toggle-menu {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+    width: 40px;
+    cursor: pointer;
+    z-index: 1;
+}   
+/*-----------------------------*/
+.main-menu--show {
+    transform: translateY(0);
+
+}
+
+
+
+.main-nav {
     margin-top: .5rem;
     display: flex;
     justify-content: center;
 }
-.navbar-links li{
+.main-menu__item{
     list-style-type: none;
     padding: .3rem;
 }    
-.navbar-links a {
+.main-menu__link{
     text-decoration: none;
     font-family: 'Just Me Again Down Here';
     /* font-size: 2.5em; */
@@ -271,13 +293,14 @@ body{
     justify-content: space-between;
 }
 
+
 .footer-contacto{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 0.5rem;
-    font-size: calc(3vw + .5em);
+    font-size: calc(1.25vw + 1.5em);
     font-family: 'Just Me Again Down Here', cursive;
 }
 
@@ -296,24 +319,274 @@ body{
     align-items: center;
     gap: 1rem;
     font-family: 'Just Me Again Down Here', cursive;
-    font-size: calc(3vw + .5em);
+    font-size: calc(1.25vw + 1.5em);
 }
 
-.footer-social-media-img {
+.footer-social__menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    gap: .5rem;
-
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
 
-.footer-social-media-img a {
-    display: flex;
-    padding: .5rem;
+.footer-social__item {
+    list-style-type: none;
 }
+
 
 
 /* Apartir de acá responsive  */
 /*----------------------------*/
 /*----------------------------*/
+
+
+@media screen and (max-width: 576px) {
+
+    .banner-hora {
+        display: none;
+    }
+
+    .header,
+    .navbar {
+        position: relative;
+        z-index: 1;
+    }
+
+    header,
+    .main-nav {
+        background: var(--color-header);
+        width: 100%;
+        height: 60px;
+        position: fixed;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 5%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        top: -7px;
+    }
+
+    .logo h1{
+        font-size: calc(1.5vw + 1.25em);
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    .logo img {
+        height: calc(1.5vw + 40px);
+        width: calc(1.5vh + 40px);
+    }
+
+    /* estilos de la  barra */
+    .main-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--color-header);
+        transition: transform 0.3s;
+        transform: translateY(-100%);
+        margin-top: 8rem;
+
+    }
+.main-menu--show {
+    transform: translateY(0);
+    height: 800px;
+    width: 100%;
+    background: var(--color-header);
+    
+}
+
+.main-menu__item {
+    margin-top: .5rem;
+    padding: .5rem;
+}
+.main-menu__link {
+    font-size: calc(1.25vw + 1.5em);
+}
+
+.main {
+    grid-column: 1 / 37;
+    grid-row: 1 / 30;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.imagenes {
+    grid-column: 1 / 13;
+    grid-row: 2 / 13;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr repeat(2, 1fr);
+
+}
+
+.img-1-div{
+    height: 100%;
+    width: 100%;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../assets/cervezas.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.img-1-div p,
+.img-2-div p,
+.img-3-div p{
+    font-size:  calc(1.25vw +  2em);
+}
+
+.img-2-div {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../assets/morfi\ \(2\).jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
+.img-3-div {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../assets/mapa.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.footer {
+    color: var(--color-texto);
+    background: var(--color-footer);
+    grid-column: 1 / 37;
+    grid-row: 30 / 37;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Esta breakpoint  por el momento esat en stand by*/
+@media screen and (min-width: 735px) {
+    .toggle-menu {
+        display: none;
+    }
+}
+
+
+/* @media screen and (max-width: 900px) {
+    .banner-hora {
+        display: none;
+        }
+
+
+.grid-layout {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+
+}
+    
+    .header {
+        background: var(--color-header);
+        grid-column: 2 / 24;
+        grid-row: 2/ 6;
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+        .container-navbar,
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+            gap: 1rem;
+        }
+    
+    
+        .logo img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50%;
+        }
+        .navbar-links li {
+            list-style-type: none;
+            padding: .3rem;
+            display: inline-block;
+        }
+        .navbar-links a {
+            text-decoration: none;
+            font-family: 'Just Me Again Down Here';
+            font-size: clamp(1em, 3vw, 3em);
+            color: var(--color-texto);
+            display: inline-block;
+        } 
+        
+        .main {
+                grid-column: 2 / 24;
+                grid-row: 4 / 20;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+        }
+
+        .footer {
+            color: var(--color-texto);
+            background: var(--color-footer);
+            grid-column: 2 / 24;
+            grid-row: 20 / 24;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    } */
