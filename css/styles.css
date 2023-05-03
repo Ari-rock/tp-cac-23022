@@ -64,6 +64,7 @@ body{
     grid-template-columns: repeat(36, 1fr);
     grid-template-rows: repeat(36, 1fr);
     
+    
 }
 
 /* Header */
@@ -289,9 +290,12 @@ img {
     background: var(--color-footer);
     grid-column: 2 / 36;
     grid-row: 30 / 36;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 200%;
 }
+
 
 
 .footer-contacto{
@@ -394,7 +398,7 @@ img {
         flex-direction: column;
         align-items: center;
         background: var(--color-header);
-        transition: transform 0.3s;
+        transition: all 0.3s;
         transform: translateY(-100%);
         margin-top: 8rem;
 
@@ -485,108 +489,189 @@ img {
     grid-column: 1 / 37;
     grid-row: 30 / 37;
     display: flex;
-    justify-content: space-between;
-    
-}
+    flex-direction: column;
+    justify-content: center;
 
 
 }
+.footer-contacto {
+    margin-top: -50px;
+}
+
+.footer-social-media {
+    margin-top: 30px;
+}
+}
+
+
+
+/* 2do Punto de corte Tablet */
+
+@media screen and (max-width: 770px) {
+
+    .banner-hora {
+        display: none;
+    }
+
+    .header,
+    .navbar {
+        position: relative;
+        z-index: 1;
+    }
+
+    header,
+    .main-nav {
+        background: var(--color-header);
+        width: 100%;
+        height: 60px;
+        position: fixed;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 5%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        top: -7px;
+    }
+
+    .logo h1 {
+        font-size: calc(1.5vw + 1.25em);
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    .logo img {
+        height: calc(1.5vw + 40px);
+        width: calc(1.5vh + 40px);
+    }
+
+    /* estilos de la  barra */
+    .main-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--color-header);
+        transition: all 0.3s;
+        transform: translateY(-100%);
+        margin-top: 8rem;
+
+    }
+
+    .main-menu--show {
+        transform: translateY(0);
+        height: 800px;
+        width: 100%;
+        background: var(--color-header);
+
+    }
+
+    .main-menu__item {
+        margin-top: .5rem;
+        padding: .5rem;
+    }
+
+    .main-menu__link {
+        font-size: calc(1.25vw + 1.5em);
+    }
+
+    .main {
+        grid-column: 1 / 37;
+        grid-row: 1 / 30;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .imagenes {
+        grid-column: 1 / 13;
+        grid-row: 2 / 13;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr repeat(2, 1fr);
+
+    }
+
+    .img-1-div {
+        height: 100%;
+        width: 100%;
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url("../assets/cervezas.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .img-1-div p,
+    .img-2-div p,
+    .img-3-div p {
+        font-size: calc(1.25vw + 2em);
+    }
+
+    .img-2-div {
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url("../assets/morfi\ \(2\).jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+    }
+
+
+    .img-3-div {
+        width: 100%;
+        height: 100%;
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url("../assets/mapa.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .footer {
+        color: var(--color-texto);
+        background: var(--color-footer);
+        grid-column: 1 / 37;
+        grid-row: 30 / 37;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+
+    .footer-contacto {
+        margin-top: -50px;
+    }
+
+    .footer-social-media {
+        margin-top: 30px;
+    }
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* Esta breakpoint  por el momento esat en stand by*/
-@media screen and (min-width: 735px) {
+@media screen and (min-width: 770px) {
     .toggle-menu {
         display: none;
     }
 }
-
-
-/* @media screen and (max-width: 900px) {
-    .banner-hora {
-        display: none;
-        }
-
-
-.grid-layout {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(24, 1fr);
-
-}
-    
-    .header {
-        background: var(--color-header);
-        grid-column: 2 / 24;
-        grid-row: 2/ 6;
-        display: flex;
-        justify-content: flex-start;
-        
-    }
-        .container-navbar,
-        .navbar {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .logo {
-            display: flex;
-            flex-direction: row;
-            align-items: center; 
-            gap: 1rem;
-        }
-    
-    
-        .logo img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50%;
-        }
-        .navbar-links li {
-            list-style-type: none;
-            padding: .3rem;
-            display: inline-block;
-        }
-        .navbar-links a {
-            text-decoration: none;
-            font-family: 'Just Me Again Down Here';
-            font-size: clamp(1em, 3vw, 3em);
-            color: var(--color-texto);
-            display: inline-block;
-        } 
-        
-        .main {
-                grid-column: 2 / 24;
-                grid-row: 4 / 20;
-                display: grid;
-                grid-template-columns: repeat(12, 1fr);
-                grid-template-rows: repeat(12, 1fr);
-        }
-
-        .footer {
-            color: var(--color-texto);
-            background: var(--color-footer);
-            grid-column: 2 / 24;
-            grid-row: 20 / 24;
-            display: flex;
-            justify-content: space-between;
-        }
-
-    } */
