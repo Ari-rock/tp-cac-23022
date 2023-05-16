@@ -178,6 +178,16 @@ img {
   font-size: clamp(0.8em, 1vw, 1.5em);
 }
 
+p + .reserva{
+  font-family: "Just Me Again Down Here";
+  font-size: calc(1vw +  1.5em);
+  font-weight: bold;
+}
+
+p + .reserva a {
+  text-decoration: none;
+  color: black;
+}
 .imagenes {
   grid-column: 1 / 13;
   grid-row: 2 / 13;
@@ -185,6 +195,8 @@ img {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
+
+
 
 .img-1-div {
   height: 100%;
@@ -197,6 +209,7 @@ img {
   background-image: url("../assets/cervezas.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  text-decoration: none;
 }
 
 .img-1-div p {
