@@ -179,7 +179,7 @@ img {
 
 .banner-hora p {
   font-family: "Kameron", serif;
-  font-size: clamp(0.8em, 1vw, 1.5em);
+  font-size: clamp(1em, 1.2vw, 1.5em);
 }
 
 p + .reserva{
