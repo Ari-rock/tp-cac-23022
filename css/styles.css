@@ -51,17 +51,21 @@
 
 body {
   background-image: url(../assets/personas-tomando-cerveza.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: cover ;
+  background-attachment: scroll;
   overflow-x: hidden;
+  
+  
 }
 
 .grid-layout {
   width: 100vw;
   height: 100vh;
+  max-height: 100%;
   display: grid;
   grid-template-columns: repeat(36, 1fr);
-  grid-template-rows: repeat(36, 1fr);
+  /* grid-template-rows: repeat(36, 1fr); */
 }
 
 /* Header */
@@ -285,8 +289,8 @@ p + .reserva a {
   grid-row: 30 / 36;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  height: 200%;
+  grid-template-rows: subgrid;
+  height: 150%;
 }
 
 .footer-contacto {
