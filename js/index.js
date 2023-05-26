@@ -1,7 +1,14 @@
-const toggleMenu = document.getElementById('toggle-menu');
-const navbarMenuLinks = document.getElementById('main-menu')
+import { menuHamburguer } from "./modulos/hamburguer.js"
+import { apiLocales } from "./modulos/locales.js"
+
+menuHamburguer()
+apiLocales()
 
 
-toggleMenu.addEventListener('click', ()=>{
-    navbarMenuLinks.classList.toggle('main-menu--show')
-})
+// const toggleMenu = document.getElementById('toggle-menu');
+// const navbarMenuLinks = document.getElementById('main-menu')
+
+
+// toggleMenu.addEventListener('click', ()=>{
+//     navbarMenuLinks.classList.toggle('main-menu--show')
+// })

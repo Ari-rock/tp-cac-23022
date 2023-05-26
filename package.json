@@ -1,0 +1,21 @@
+{
+  "name": "tp-cac-23022",
+  "version": "1.0.0",
+  "description": "Trabajo practico codo a codo full stack python\r ------------------------------------------------\r Comision 23022",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ari-rock/tp-cac-23022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ari-rock/tp-cac-23022/issues"
+  },
+  "homepage": "https://github.com/Ari-rock/tp-cac-23022#readme"
+}

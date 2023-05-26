@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Happy Monkey', cursive;
+    background-color: #e9e9f3;
+    background-image: url(../assets/personas-tomando-cerveza.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    
+    background-color: rgb(164, 241, 199);
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 4rem 2rem 4rem 1rem;
+    border-radius: 100px;
+    box-shadow: 0 50px -10px rgb(0 ,0 ,0 / 70%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.formulario-parrafo{ 
+   
+    margin-top: -15px;
+}
+
+.formulario-contenedor {
+    margin-top: 25px;
+    display: grid;
+    gap: 8px;
+    
+}
+
+.formulario-grupo{
+   background-color: rgb(28, 199, 230);
+    text-align: left;
+}
+
+.formulario-entrada{ 
+    width: 100%;
+    color: rgb(26, 24, 26);
+    font-size: 20px;
+}
+
+#bottom{
+    margin-top: 10px;
+    margin-right: 205px;
+    padding: 4px 4px 4px 4px;
+    font-size: 20px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: darkorange;
+}
+
+.etiqueta{ 
+padding: 10px;
+font-size: 20PX;
+
+
+}
+
+.ki { font-size: 18px;
+    background-color: aqua;
+
+}
+
+.warning {
+    width: 360px;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    color:black;
+    padding-top: 10px;
+    
+       }
+
+    
