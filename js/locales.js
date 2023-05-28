@@ -1,4 +1,4 @@
-export function apiLocales() {
+
   let url = "../js/datos.json";
 
   let cardContainer = document.getElementById("card-container");
@@ -22,6 +22,6 @@ export function apiLocales() {
     })
     .catch((err) => console.log(err));
 
-}
+
 
 
